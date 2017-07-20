@@ -1,9 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
-ReactDOM.render(
-  <div>
-    <h1>React Legend</h1>
-  </div>,
-  document.getElementById('react-app-root')
-);
+import App from './components/App';
+
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('react-app-root')
+  );
+};
+
+render(App);
+
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App)
+  });
+}

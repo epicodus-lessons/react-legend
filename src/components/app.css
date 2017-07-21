@@ -4,7 +4,3 @@ body, #react-app-root, .app {
   height: 100vh;
   min-height: 100%;
 }
-
-.app {
-  background-color: red;
-}

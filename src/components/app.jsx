@@ -1,9 +1,9 @@
 import React from "react";
-import styles from './app.css';
 
 function App(props){
+  console.log(props);
   return (
-    <div className="app">
+    <div className={props.styles.app}>
       <h1>React Legend</h1>
     </div>
   );

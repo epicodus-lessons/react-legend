@@ -1,6 +1,38 @@
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-body, #react-app-root, .app {
+body, .wrapper {
   height: 100vh;
   min-height: 100%;
+  background-color: #FFFFFD;
+  font-family: 'Montserrat', sans-serif;
+  color: #001E33;
+}
+
+h1, h2, h3 {
+  font-family: 'Pacifico', cursive;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #FFFFFD;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #6B1311;
+  border-bottom: solid 4px #001E33;
+  border-top: solid 4px #001E33;
+}
+
+.header div {
+
 }

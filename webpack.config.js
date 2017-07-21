@@ -53,11 +53,15 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'css-loader',
-        query: {
+        options: {
           modules: true,
-          localIdentName: '[name]__[local]___[hash:base64:5]'
+          localIdentName: '[name]__[local]___[hash:base64:5]',
         }
-      }
+      },
+      // {
+      //   test: /\.css$/,
+      //   loader: ExtractTextPlugin.extract('style-loader')
+      // }
     ]
   },
 
@@ -70,6 +74,7 @@ module.exports = {
       title: 'React Help Queue',
       filename: resolve(__dirname, "build", "index.html"),
     }),
+    /// passing empty object as argument. options are either file name or object with configuration points... empty object represents that we're not using extract-text to pass info to file, but rather to create class e
     new ExtractTextPlugin('styles.css')
   ]
 };
